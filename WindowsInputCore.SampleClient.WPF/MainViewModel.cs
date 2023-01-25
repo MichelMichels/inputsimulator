@@ -78,5 +78,11 @@ namespace WindowsInputCore.SampleClient.WPF
                .Sleep(1000)
                .MoveMouseTo(65535 / 2, 65535 / 2);
         }
+
+        [RelayCommand]
+        public void PressWindowsTab()
+        {
+            inputSimulator.Keyboard.ModifiedKeyStroke(VirtualKeyCode.LWIN, VirtualKeyCode.TAB).Sleep(1000);
+        }
     }
 }

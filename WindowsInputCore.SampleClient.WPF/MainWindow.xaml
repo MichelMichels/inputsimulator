@@ -58,6 +58,14 @@
                     Command="{Binding SayHelloCommand}"
                     Content="Say hello"
                     FontSize="16" />
+
+                <Button
+                    Margin="8"
+                    Padding="16,8"
+                    BorderBrush="LightGray"
+                    Command="{Binding PressWindowsTabCommand}"
+                    Content="WIN + TAB"
+                    FontSize="16" />
             </WrapPanel>
 
         </StackPanel>
