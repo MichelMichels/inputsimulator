@@ -1,12 +1,66 @@
-﻿<Window x:Class="WindowsInputCore.SampleClient.WPF.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WindowsInputCore.SampleClient.WPF"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+﻿<Window
+    x:Class="WindowsInputCore.SampleClient.WPF.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WindowsInputCore.SampleClient.WPF"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    MinWidth="350"
+    MinHeight="250"
+    d:DataContext="{d:DesignInstance Type={x:Type local:MainViewModel}}"
+    SizeToContent="WidthAndHeight"
+    mc:Ignorable="d">
+    <Border Padding="16">
+        <StackPanel>
+            <TextBlock
+                FontSize="32"
+                FontWeight="Bold"
+                Text="SampleClient.WPF" />
 
-    </Grid>
+            <TextBlock
+                Margin="0,0,0,16"
+                FontSize="16"
+                Foreground="Gray"
+                Text="WindowsInputCore" />
+
+            <WrapPanel>
+                <Button
+                    Margin="8"
+                    Padding="16,8"
+                    BorderBrush="LightGray"
+                    Command="{Binding MouseMoveToCommand}"
+                    Content="Move mouse"
+                    FontSize="16" />
+
+                <Button
+                    Margin="8"
+                    Padding="16,8"
+                    BorderBrush="LightGray"
+                    Command="{Binding OpenPaintCommand}"
+                    Content="Open paint"
+                    FontSize="16" />
+
+                <Button
+                    Margin="8"
+                    Padding="16,8"
+                    BorderBrush="LightGray"
+                    Command="{Binding OpenWindowsExplorerCommand}"
+                    Content="Open explorer"
+                    FontSize="16" />
+
+                <Button
+                    Margin="8"
+                    Padding="16,8"
+                    BorderBrush="LightGray"
+                    Command="{Binding SayHelloCommand}"
+                    Content="Say hello"
+                    FontSize="16" />
+            </WrapPanel>
+
+        </StackPanel>
+    </Border>
+
 </Window>
